@@ -23,7 +23,7 @@ class ManageStack():
                 self.s.remove(int(i))
                 print(f'Delete = {i}')
 
-    def lessThen(self, i):
+    def lessThan(self, i):
         self.deL = []
         if len(self.s) == 0:
             print("-1")
@@ -36,7 +36,7 @@ class ManageStack():
                 self.s.remove(self.deL[k])
                 print(f'Delete = {self.deL[k]} Because {self.deL[k]} is less than {i}')
 
-    def moreThen(self, i):
+    def moreThan(self, i):
         self.deL = []
         if len(self.s) == 0:
             print("-1")
