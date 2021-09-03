@@ -6,20 +6,6 @@ class Stack():
     def add(self,i):      # เก็บข้อมูลลง stack
         self.s.append(int(i))
 
-    def pop(self):         # นำข้อมูลออกจาก stack
-        self.s.pop()
-
-    def isEmpty(self):     # ตรวจสอบว่า stack ว่างไหม ถ้าว่าง return true ถ้าไม่ว่าง return false
-        if len(self.s) != 0:
-            return False
-        else: return True
-
-    def size(self):        # ตรวจสอบจำนวนข้อมูลใจ stack
-        return len(self.s)
-
-    def items(self):
-        return self.s
-
     def toxic(self):
         for i in range(0,len(self.s)):
             if self.s[i] % 2 == 1:
@@ -47,6 +33,7 @@ class Stack():
                     num.append(self.s[j])
             print(len(num))
 
+
 ip = [e for e in input("Enter Input : ").split(",")]
 
 s = Stack()
@@ -60,4 +47,3 @@ for i in range(0,len(ip)):
         command, value = ip[i].split()
         if command == 'A':
             s.add(value)
-
